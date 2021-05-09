@@ -1,0 +1,33 @@
+.container {
+  @apply select-none;
+  display: flex;
+  align-items: center;
+}
+
+
+.control {
+  @apply relative top-0 left-0 overflow-hidden flex items-center justify-center;
+}
+
+.icon {
+  @apply relative flex items-center justify-center;
+  z-index: 1;
+}
+
+.bgIcon {
+  @apply absolute inset-0;
+}
+
+.children {
+  margin-left: 5px;
+  @apply text-gray-700 text-sm leading-4 font-normal;
+}
+
+.innerWrap {
+  @apply relative inline-block align-middle;
+}
+
+.input {
+  @apply absolute inset-0 opacity-0;
+  z-index: 1;
+}

@@ -1,0 +1,27 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn.lock
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# Local Netlify folder
+.netlify
+netlify.toml

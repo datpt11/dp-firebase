@@ -1,0 +1,59 @@
+.container {
+  :global {
+    .rc-tabs {
+      @apply border-none;
+    }
+
+    .rc-tabs-tab {
+      @apply text-sm font-medium;
+    }
+
+    .rc-tabs-tab-active {
+      @apply text-primary font-bold;
+    }
+
+    .rc-tabs-nav-more {
+      @apply border-none shadow-md w-8 h-8 bg-secondary;
+      border-radius: 5px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .rc-tabs-nav-wrap {
+
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+
+    .rc-tabs-top,
+    .rc-tabs-bottom {
+      .rc-tabs-ink-bar {
+        width: 25px !important;
+      }
+    }
+
+    .rc-tabs-left,
+    .rc-tabs-right {
+      .rc-tabs-tab {
+        padding: 0 15px !important;
+      }
+    }
+
+    .rc-tabs-ink-bar {
+      border-radius: 5px;
+      @apply bg-primary;
+    }
+
+  }
+}
+
+:global {
+  .rc-tabs-dropdown {
+    border-radius: 5px;
+    @apply shadow-md bg-secondary border-none
+  }
+}

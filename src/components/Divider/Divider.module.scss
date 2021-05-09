@@ -1,0 +1,11 @@
+.container {
+  @apply border-t border-gray-200 border-solid mb-5 text-center overflow-visible text-gray-400;
+
+  &:after {
+    position: relative;
+    top: -10px;
+    content: 'Or';
+    padding: 0 16px;
+    background: #fff;
+  }
+}
