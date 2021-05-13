@@ -63,9 +63,7 @@ const Button: FC<ButtonProps> = ({
     onClick?.(event);
   };
 
-  const renderIcon = () => {
-    return !!icon && icon;
-  };
+  const _icon = !!icon && icon;
 
   if (!!href || !!target) {
     return (
@@ -87,9 +85,11 @@ const Button: FC<ButtonProps> = ({
       style={{ backgroundColor, color }}
       onClick={handleClick}
     >
-      <span className={`${styles.icon} ${shape === 'circle' ? 'mr-0' : ' mr-2'}`}>
-        {loading ? <ActivityIndicator color={loadingColor} size={size} /> : renderIcon()}
-      </span>
+      {(icon || loading) && (
+        <span className={`${styles.icon} ${shape === 'circle' ? 'mr-0' : ' mr-2'}`}>
+          {loading ? <ActivityIndicator color={loadingColor} size={size} /> : _icon}
+        </span>
+      )}
       {!!children && <span className="flex-shrink-0 flex-grow-0 ">{children}</span>}
     </button>
   );
